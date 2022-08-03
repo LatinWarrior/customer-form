@@ -1,11 +1,18 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Button } from 'daisyui';
+import { FaSave } from 'react-icons/fa';
 
-export const Customer = ({ id, name, phone, postalCode, address, email }) => {
-    // const onSave = (id) => {
-    //     // TODO: Use an email service to send email.
-    //     console.log(`save id: ${id}`);
-    // };
+export const Customer = () => {
+    const currentLocation = useLocation();
+    debugger;
+    const { id, name, phone, postalCode, address, email } =
+        currentLocation.state;
+    const saveCustomer = (e, id) => {
+        // TODO: Use an email service to send email.
+        e.preventDefault();
+        console.log(`save id: ${id}`);
+    };
 
     return (
         <div className='form-control w-full mt-12 max-w-xs mx-auto px-6 h-2/3 bg-customLightGray lg:max-w-lg'>
@@ -21,6 +28,12 @@ export const Customer = ({ id, name, phone, postalCode, address, email }) => {
                 placeholder='Your Name'
                 className='input input-bordered max-w-xs text-black bg-slate-200 mb-6 lg:max-w-lg'
             />
+            {/* <Button
+                className='btn btn-secondary btn-lng btn-ghost'
+                onClick={(e) => saveCustomer(e, id)}>
+                <FaSave className='mr-2' />
+                Save
+            </Button> */}
         </div>
         // <div className='form-control w-full mt-12 max-w-xs mx-auto px-6 h-2/3 bg-customLightGray lg:max-w-lg'>
         //     <label className='label mt-4'>

@@ -21,7 +21,7 @@ export const Home = () => {
                 hic aliquam eligendi officiis modi eum optio nulla sequi autem!
             </p>
             <Link
-                className='btn btn-secondary btn-lg bnt-ghost mt-20'
+                className='btn btn-secondary btn-lg btn-ghost mt-20'
                 to='/customers'>
                 <FaList className='mr-2' />
                 Go to Customer List

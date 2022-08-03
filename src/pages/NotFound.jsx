@@ -8,7 +8,7 @@ export const NotFound = () => {
                 <div className='max-w-lg'>
                     <h1 className='text-8xl font-bold mb-8'>Oops!</h1>
                     <p className='text-5xl mb-8'>404 - Page Not Found!</p>
-                    <Link className='btn btn-secondary btn-lg bnt-ghost' to='/'>
+                    <Link className='btn btn-secondary btn-lg' to='/'>
                         <FaHome className='mr-2' />
                         Back To Home
                     </Link>

@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { Customer } from './pages/Customer';
 
 import { CustomerList } from './pages/CustomerList';
 
@@ -13,6 +14,7 @@ function App() {
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/customers' element={<CustomerList />} />
+                        <Route path='/customers/:id' element={<Customer />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </section>
