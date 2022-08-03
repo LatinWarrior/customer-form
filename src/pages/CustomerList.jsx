@@ -1,28 +1,34 @@
 import React from 'react';
 
-import { Customer } from './Customer';
-
 import customerList from './../data/customerList';
 
 export const CustomerList = () => {
     return (
-        <div>
-            <div className='grid m-4 grid-cols-1 gap-4 pb-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-                {customerList.map((customer) => {
-                    console.log(`customer: ${JSON.stringify(customer)}`);
-                    return (
-                        <Customer
-                            key={customer.id}
-                            id={customer.id}
-                            name={customer.name}
-                            email={customer.email}
-                            phone={customer.phone}
-                            postalCode={customer.postalCode}
-                            address={customer.address}
-                        />
-                    );
-                })}
-            </div>
+        <div class='overflow-x-auto'>
+            <table class='table table-zebra w-full'>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {customerList &&
+                        customerList.map((customer) => {
+                            return (
+                                <tr>
+                                    <th>{customer.id}</th>
+                                    <td>{customer.name}</td>
+                                    <td>{customer.email}</td>
+                                    <td>{customer.phone}</td>
+                                </tr>
+                            );
+                        })}
+                    ;
+                </tbody>
+            </table>
         </div>
     );
-};
+}
