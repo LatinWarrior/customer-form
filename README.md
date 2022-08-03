@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Install Json server globally, if not already installed.
+
+### ` `
+
+## Use json server
+
+### `json-server --watch ./data/customerList.json --port=8000`
+
 ## Available Scripts
 
 In the project directory, you can run:
